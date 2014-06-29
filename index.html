@@ -79,8 +79,6 @@
             <h3>Bitcoin</h3>
             <p class="fragment">Transactions are processed by a peer-to-peer network.</p>
             <p class="fragment">Public ledger containing all transactions (blockchain).</p>
-            <p class="fragment">Maintaining the block chain is called mining.</p>
-            <p class="fragment">Miners process payments by verifying each transaction as valid and adding it to the block chain.</p>
     </section>  
     <section>
             <h3>The Problem with Transactions</h3>
@@ -91,13 +89,40 @@
     </section>  
     <section>
             <h3>Mining</h3>
+            <p class="fragment">Maintaining the blockchain is called mining.</p>
+            <p class="fragment">Miners process payments by verifying each transaction as valid and adding it to the block chain.</p>
             <p class="fragment">Gather a set of transactions into a block.</p>
             <p class="fragment">Apply a cryptographic hash function that (eventually) results in a hash of a certain difficulty.</p>
             <p class="fragment">This is known as "Proof-of-Work".</p>
-            <p class="fragment">Slows down the broadcast of messages.</p>
-            <p class="fragment">Usually one message is broadcast every 10 minutes.</p>
     </section>  
+    <section>
+      <h3>Cryptographic Hash</h3>
+      <p> </p>
+      <pre><code data-trim>
+sha256("But here's my number so call me maybe")
+c7331b414067c5101f66657909eb56eb5d50e4b5883c35ca5f08bfb2d3798fd6
+</code></pre>
+<p>Notice how the hash drastically changes due to a one character change:</p>
+<pre><code data-trim>
+sha256("But here's my number so call me maybe.")
+dc15744ef69e4a81e7dc0f04921b471101389609e729624438c3b15afb4d09a4
+      </code></pre>
+    </section>
+    <section>
+            <h3>Block hashing algorithm</h3>
+<pre><code data-trim>
+if sha256(sha256(prevHash + transactionsHash + random guess)) < target
+</code></pre>
+      <p>Bitcoin has a target hash that looks something like this:</p>
+      <pre><code data-trim>00000000000000001e8d6829a8a21adc5d38d0a473b144b6765798e61f98bd1d</code></pre>
 
+    </section>  
+    <section>
+            <h3>How "Proof-of-Work" Solved The Byzantine Generals Problem</h3>
+            <p class="fragment">Proof-of-Work adds a cost to the sending of a messenger.</p>
+            <p class="fragment">Slows down the sending of messengers.</p>
+            <p class="fragment">Effort is put into propagating the TRUTH.</p>
+    </section>  
     </div>
 </div>
 
