@@ -41,20 +41,13 @@
 		        ## The Byzantine Generals Do Crypto
 		    </script>
 		</section>    
-    <section>
-            <h3>The Two Generals Problem</h3>
-            <p><img src="./433px-2-generals.svg.png" alt="The Two Generals Problem" title="The Two Generals Problem"></p>
-    </section>  
-
 		<section>
 		        <h3>The Byzantine Generals Problem</h3>
 				    <p><img src="./graph_fail3.png" alt="Consensus" title="Consensus"></p>
       			<p>Generals propose a time to attack.</p>
       			<p>Generals must communicate by sending messengers.</p>
       			<p>Generals can send many messengers.</p>
-      			<p>Some generals may be traitors.</p>
-      			<p>Loyal generals must come to a <em>consensus</em> on the time to attack.</p>
-      			<p>More than half of the generals must attack.</p>
+      			<p>Generals must come to a <em>consensus</em> on the time to attack.</p>
 		</section>  
 		<section>
 		        <h3>The Method</h3>
@@ -73,12 +66,13 @@
     <section>
             <h3>Truth</h3>
             <p><img src="./graph_fail3.png" alt="Consensus" title="Consensus"></p>
-            <p>How do you establish truth in a distributed network (that may contain bad actors)?</p>
+            <p>How do you establish truth in a distributed network?</p>
     </section>  
     <section>
             <h3>Bitcoin</h3>
-            <p class="fragment">Transactions are processed by a peer-to-peer network.</p>
             <p class="fragment">Public ledger containing all transactions (blockchain).</p>
+            <p class="fragment">A transaction: send x amount from A->B.</p>
+            <p class="fragment">Transactions are processed by a peer-to-peer network.</p>
     </section>  
     <section>
             <h3>The Problem with Transactions</h3>
@@ -93,6 +87,7 @@
             <p class="fragment">Miners process payments by verifying each transaction as valid and adding it to the block chain.</p>
             <p class="fragment">Gather a set of transactions into a block.</p>
             <p class="fragment">Apply a cryptographic hash function that (eventually) results in a hash of a certain difficulty.</p>
+            <p class="fragment">Publish block hash to the network".</p>
             <p class="fragment">This is known as "Proof-of-Work".</p>
     </section>  
     <section>
