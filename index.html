@@ -106,10 +106,14 @@ dc15744ef69e4a81e7dc0f04921b471101389609e729624438c3b15afb4d09a4
     <section>
             <h3>Block hashing algorithm</h3>
 <pre><code data-trim>
-if sha256(sha256(prevHash + transactionsHash + random guess)) < target
+if sha256(sha256(prevHash + transactionsHash + random number)) < target
 </code></pre>
       <p>Bitcoin has a target hash that looks something like this:</p>
       <pre><code data-trim>00000000000000001e8d6829a8a21adc5d38d0a473b144b6765798e61f98bd1d</code></pre>
+      <p class="fragment">Only if this is true can a miner publish to the network.</p>
+      <p class="fragment">Guessing the right random number takes time.</p>
+      <p class="fragment">Miners receive one block soultion at a time (usually).</p>
+      <p class="fragment">Simple to validate and agree on the transaction order.</p>
 
     </section>  
     <section>
